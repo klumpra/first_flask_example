@@ -7,6 +7,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
 # model class
+# this is the data that the application will manage
 class Todo(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     content = db.Column(db.String(200), nullable=False)
